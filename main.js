@@ -10,12 +10,12 @@ const sleep = require('system-sleep');
 
 
 
-const host = "http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/2018/";
+const host = "http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/2020/";
 //这个 ip 是通过 dns 工具直接解析出来的，因为大量爬取需要进行多次 dns 解析，时间长了 nodejs 会报 dns 解析错误
 //应该是有缓存的，但是还是报 dns 解析有问题，这个 ip 可能会变，在使用时可以实时解析一下统计局的网站域名，如果不使用 ip
 //则把 IP 内容换成域名即可
-// const IP = 'www.stats.gov.cn'
-const IP = '219.235.129.117:80'
+const IP = 'www.stats.gov.cn'
+//const IP = '219.235.129.117:80'
 
 
 function absolutePath(url) {
@@ -416,7 +416,7 @@ function pullVillageDataSync(townPath, offset) {
 }
 
 
-// main();
-// pullCountyDataSync(CityPath, 0);
-// pullTownDataSync(CountyPath, 0);
-pullVillageDataSync(TownPath, 43302); //43302
+main();
+//pullCountyDataSync(CityPath, 0);
+//pullTownDataSync(CountyPath, 0);
+//pullVillageDataSync(TownPath, 43302); //43302
